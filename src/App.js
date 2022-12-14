@@ -27,7 +27,6 @@ function App() {
               <li> <a href='#box2'>Why Hella?</a></li>
               <li> <a href='#box3'>Services</a></li>
               <li> <a href='#box4'>Contact</a></li>
-              <li> <a href='#box4'>Contact</a></li>
             </ul>
           </nav>
           <ul>
