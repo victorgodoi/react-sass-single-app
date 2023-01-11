@@ -61,6 +61,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+
 }
 
 p {
@@ -122,6 +123,9 @@ header {
     margin: 0px 18px;
     display: inline-block;
 
+    a {
+      text-decoration: none;
+    }
 
     &.selecionado a {
       font-weight: 600;

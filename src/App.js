@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [classeHeader, atualizarClasse] = useState()
+  const [itenAtivo, atualizarItenAtivo] = useState('Home')
 
   useEffect(() => {
     window.addEventListener("scroll", atualizarHeader)
@@ -15,6 +16,9 @@ function App() {
       atualizarClasse()
     };
   }
+  const MenuIten = ({ link, nome }) => {
+    return <li className={itenAtivo === nome ? 'selecionado' : ''} onClick={() => atualizarItenAtivo(nome)}> <a href={link}>{nome}</a></li>
+  }
 
   return (
     <div id='page'>
@@ -23,10 +27,10 @@ function App() {
           <img src='/Images/Logo.png' width='143' height='52' />
           <nav>
             <ul>
-              <li className='selecionado'> <a href='#'>Home</a></li>
-              <li> <a href='#box2'>Why Hella?</a></li>
-              <li> <a href='#box3'>Services</a></li>
-              <li> <a href='#box4'>Contact</a></li>
+              <MenuIten link='#' nome='Home' />
+              <MenuIten link='#box2' nome='Why Hella?' />
+              <MenuIten link='#box3' nome='Services' />
+              <MenuIten link='#box4' nome='Contact' />
             </ul>
           </nav>
           <ul>
