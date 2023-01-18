@@ -4,13 +4,19 @@ import { useEffect, useState } from 'react';
 function App() {
   const [classeHeader, atualizarClasse] = useState()
   const [itenAtivo, atualizarItenAtivo] = useState('Home')
+  const boxes = document.querySelectorAll('.box')
 
   useEffect(() => {
-    window.addEventListener("scroll", atualizarHeader)
-  }, []);
+    window.addEventListener("scroll", () => {
+      atualizarHeader()
+      detectarItemAtivo()
+    })
+  }, [boxes]);
+
+  console.log(itenAtivo)
 
   const atualizarHeader = () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 40 && classeHeader !== 'small') {
       atualizarClasse('small')
     } else {
       atualizarClasse()
@@ -19,6 +25,15 @@ function App() {
   const MenuIten = ({ link, nome }) => {
     return <li className={itenAtivo === nome ? 'selecionado' : ''} onClick={() => atualizarItenAtivo(nome)}> <a href={link}>{nome}</a></li>
   }
+
+  const detectarItemAtivo = () => {
+    boxes.forEach((box) => {
+      if (window.scrollY >= box.offsetTop - box.clientHeight / 3) {
+        atualizarItenAtivo(box.getAttribute("id"));
+      }
+    });
+  }
+
 
   return (
     <div id='page'>
@@ -40,7 +55,7 @@ function App() {
         </div>
       </header>
       <div className='conteudo'>
-        <div id='box1'>
+        <div id='box1' className='box'>
           <div className='divEsq'>
             <h1>Healing yourself is connected with healing others.</h1>
             <img src='/images/bgTitulo.png' width='230' height='82' />
@@ -52,7 +67,7 @@ function App() {
           </div>
           <div className='divDir'> <img src='/images/Imagem1.png' width='510' height='380' /></div>
         </div>
-        <div id='box2'>
+        <div id='box2' className='box'>
           <p>Community health centers do a great deal with limited resources</p>
           <img src='/images/bgBox2.png' width='100' height='84' />
           <div className='DivBox2'>
@@ -66,7 +81,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div id='box3'>
+        <div id='box3' className='box'>
           <div className='divEsq'>
             <h2 className='subtitulo'>Each patient carries his own doctor inside him</h2>
             <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>
@@ -74,12 +89,12 @@ function App() {
           </div>
           <div className='divDir'> <img src='/images/Imagem3.png' width='511' height='332' /></div>
         </div>
-        <div id='box4'>
+        <div id='box4' className='box'>
           <h2 className='subtitulo'>In nothing do men more nearly approach</h2>
           <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>
           <button className='verde'>Go To Services</button>
         </div>
-        <div id='box5'>
+        <div id='box5' className='box'>
           <div className='divEsq'>
             <img src='/images/Imagem4.png' width='67' height='61' />
             <ul>
