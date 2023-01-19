@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [classeHeader, atualizarClasse] = useState()
-  const [itenAtivo, atualizarItenAtivo] = useState('Home')
+  const [itemAtivo, atualizarItemAtivo] = useState('#')
   const boxes = document.querySelectorAll('.box')
 
   useEffect(() => {
@@ -13,26 +13,42 @@ function App() {
     })
   }, [boxes]);
 
-  console.log(itenAtivo)
-
   const atualizarHeader = () => {
-    if (window.scrollY > 40 && classeHeader !== 'small') {
+    if (window.scrollY >= 65 && classeHeader !== 'small') {
       atualizarClasse('small')
-    } else {
+    } else if (window.scrollY < 35 && classeHeader === 'small') {
       atualizarClasse()
     };
   }
-  const MenuIten = ({ link, nome }) => {
-    return <li className={itenAtivo === nome ? 'selecionado' : ''} onClick={() => atualizarItenAtivo(nome)}> <a href={link}>{nome}</a></li>
+  const MenuItem = ({ link, nome }) => {
+    return <li className={itemAtivo === link ? 'selecionado' : ''}> <a href={link}>{nome}</a></li>
   }
 
   const detectarItemAtivo = () => {
     boxes.forEach((box) => {
-      if (window.scrollY >= box.offsetTop - box.clientHeight / 3) {
-        atualizarItenAtivo(box.getAttribute("id"));
+      //console.log(box.getAttribute("id"), window.scrollY)
+      // if (window.scrollY >= box.offsetTop - box.clientHeight / 3) {
+      //   atualizarItemAtivo(box.getAttribute("id"));
+      // }
+      if (box.getAttribute("id") === 'box1' && window.scrollY <= 230) {
+
+        atualizarItemAtivo('#');
+      }
+      else if (box.getAttribute("id") === 'box2' && window.scrollY > 230 && window.scrollY <= 850) {
+
+        atualizarItemAtivo('#box2');
+      }
+      else if (box.getAttribute("id") === 'box3' && window.scrollY > 850 && window.scrollY <= 1300) {
+
+        atualizarItemAtivo('#box3');
+      }
+      else if (box.getAttribute("id") === 'box4' && window.scrollY > 1300 && window.scrollY <= 1500) {
+
+        atualizarItemAtivo('#box4');
       }
     });
   }
+
 
 
   return (
@@ -42,10 +58,10 @@ function App() {
           <img src='/Images/Logo.png' width='143' height='52' />
           <nav>
             <ul>
-              <MenuIten link='#' nome='Home' />
-              <MenuIten link='#box2' nome='Why Hella?' />
-              <MenuIten link='#box3' nome='Services' />
-              <MenuIten link='#box4' nome='Contact' />
+              <MenuItem link='#' nome='Home' />
+              <MenuItem link='#box2' nome='Why Hella?' />
+              <MenuItem link='#box3' nome='Services' />
+              <MenuItem link='#box4' nome='Contact' />
             </ul>
           </nav>
           <ul>
