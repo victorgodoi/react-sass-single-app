@@ -74,21 +74,21 @@ function App() {
         <div id='box1' className='box'>
           <div className='divEsq'>
             <h1>Healing yourself is connected with healing others.</h1>
-            <img src='/images/bgTitulo.png' width='230' height='82' />
+            <img src='/Images/bgTitulo.png' width='230' height='82' />
             <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>
             <div>
               <button className='verde'>Get Appointment</button>
               <p>Why Hella?</p>
             </div>
           </div>
-          <div className='divDir'> <img src='/images/Imagem1.png' width='510' height='380' /></div>
+          <div className='divDir'> <img src='/Images/Imagem1.png' width='510' height='380' /></div>
         </div>
         <div id='box2' className='box'>
           <p>Community health centers do a great deal with limited resources</p>
-          <img src='/images/bgBox2.png' width='100' height='84' />
+          <img src='/Images/bgBox2.png' width='100' height='84' />
           <div className='DivBox2'>
             <div className='divEsq'>
-              <img src='/images/Imagem2.png' width='373' height='324' />
+              <img src='/Images/Imagem2.png' width='373' height='324' />
             </div>
             <div className='divDir'>
               <h2 className='subtitulo'>The life so short, the craft so long to learn</h2>
@@ -103,7 +103,7 @@ function App() {
             <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>
             <button className='verde'>Get Appointment</button>
           </div>
-          <div className='divDir'> <img src='/images/Imagem3.png' width='511' height='332' /></div>
+          <div className='divDir'> <img src='/Images/Imagem3.png' width='511' height='332' /></div>
         </div>
         <div id='box4' className='box'>
           <h2 className='subtitulo'>In nothing do men more nearly approach</h2>
@@ -112,12 +112,12 @@ function App() {
         </div>
         <div id='box5' className='box'>
           <div className='divEsq'>
-            <img src='/images/Imagem4.png' width='67' height='61' />
+            <img src='/Images/Imagem4.png' width='67' height='61' />
             <ul>
-              <li><img src='/images/LogoInstagram.png' width='17' height='18' /></li>
-              <li><img src='/images/LogoTwitter.png' width='18' height='18' /></li>
-              <li><img src='/images/LogoFacebook.png' width='13' height='18' /></li>
-              <li><img src='/images/LogoYoutube.png' width='18' height='18' /></li>
+              <li><img src='/Images/LogoInstagram.png' width='17' height='18' /></li>
+              <li><img src='/Images/LogoTwitter.png' width='18' height='18' /></li>
+              <li><img src='/Images/LogoFacebook.png' width='13' height='18' /></li>
+              <li><img src='/Images/LogoYoutube.png' width='18' height='18' /></li>
             </ul>
           </div>
           <div className='divDir'>
