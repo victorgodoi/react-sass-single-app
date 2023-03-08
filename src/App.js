@@ -1,5 +1,6 @@
 import './App.scss';
 import { useEffect, useState } from 'react';
+import Header from './components/Header';
 
 function App() {
   const [classeHeader, atualizarClasse] = useState()
@@ -53,6 +54,7 @@ function App() {
 
   return (
     <div id='page'>
+      <Header />
       <header className={classeHeader}>
         <div className='conteudo'>
           <img src='/Images/Logo.png' width='143' height='52' />
