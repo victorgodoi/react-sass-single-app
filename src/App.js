@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 
 function App() {
-  const [classeHeader, atualizarClasse] = useState()
+  const [small, atualizarSmall] = useState(false)
   const [itemAtivo, atualizarItemAtivo] = useState('#')
   const boxes = document.querySelectorAll('.box')
 
@@ -15,14 +15,11 @@ function App() {
   }, [boxes]);
 
   const atualizarHeader = () => {
-    if (window.scrollY >= 65 && classeHeader !== 'small') {
-      atualizarClasse('small')
-    } else if (window.scrollY < 35 && classeHeader === 'small') {
-      atualizarClasse()
+    if (window.scrollY >= 65 && small !== true) {
+      atualizarSmall(true)
+    } else if (window.scrollY < 35 && small === false) {
+      atualizarSmall(false)
     };
-  }
-  const MenuItem = ({ link, nome }) => {
-    return <li className={itemAtivo === link ? 'selecionado' : ''}> <a href={link}>{nome}</a></li>
   }
 
   const detectarItemAtivo = () => {
@@ -50,28 +47,9 @@ function App() {
     });
   }
 
-
-
   return (
     <div id='page'>
-      <Header />
-      <header className={classeHeader}>
-        <div className='conteudo'>
-          <img src='/Images/Logo.png' width='143' height='52' />
-          <nav>
-            <ul>
-              <MenuItem link='#' nome='Home' />
-              <MenuItem link='#box2' nome='Why Hella?' />
-              <MenuItem link='#box3' nome='Services' />
-              <MenuItem link='#box4' nome='Contact' />
-            </ul>
-          </nav>
-          <ul>
-            <li>Login</li>
-            <li><button>Sign up</button></li>
-          </ul>
-        </div>
-      </header>
+      <Header small={small} itemAtivo={itemAtivo} />
       <div className='conteudo'>
         <div id='box1' className='box'>
           <div className='divEsq'>

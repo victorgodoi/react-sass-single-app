@@ -17,14 +17,14 @@ const Link = styled.a`
     text-decoration: none;
     ${props => props.active && css`
         font-weight: 600;
-        color: $verde;
+        color: ${props => props.theme.verde};
         text-decoration: underline; 
     `}
 
 `
 
 const Component = ({ link, nome, selected }) => {
-    return <MenuItem> <Link active={selected} href={link}>{nome}</Link></MenuItem>
+  return <MenuItem> <Link active={selected} href={link}>{nome}</Link></MenuItem>
 }
 
 export default Component
