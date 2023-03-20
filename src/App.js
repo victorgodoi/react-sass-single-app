@@ -1,6 +1,7 @@
 import './App.scss';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [small, atualizarSmall] = useState(false)
@@ -136,14 +137,15 @@ function App() {
           </div>
         </div>
       </div>
-      <footer>
+      <Footer />
+      {/* <footer>
         <div className='conteudo'>
           <div>
             <p>&copy; 2022 Rights Reserved, Taqwah Digital</p>
             <p>Privacy | Terms & Conditions | Privacy by Design | Secure by Design</p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
 
   );
