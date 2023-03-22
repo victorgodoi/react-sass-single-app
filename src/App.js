@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import styled from "styled-components";
 import Box1 from './components/Box1';
 import Box2 from './components/Box2';
+import Box3 from './components/Box3';
 
 const Content = styled.div`
 width: ${props => props.theme.pageSize};
@@ -54,21 +55,14 @@ function App() {
       }
     });
   }
-
+  //ARRUMAR O SCROLL DOS iD QUE NAO EXISTEM MAIS
   return (
     <div id='page'>
       <Header small={small} itemAtivo={itemAtivo} />
       <Content>
         <Box1 />
         <Box2 />
-        <div id='box3' className='box'>
-          <div className='divEsq'>
-            <h2 className='subtitulo'>Each patient carries his own doctor inside him</h2>
-            <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>
-            <button className='verde'>Get Appointment</button>
-          </div>
-          <div className='divDir'> <img src='/Images/Imagem3.png' width='511' height='332' /></div>
-        </div>
+        <Box3 />
         <div id='box4' className='box'>
           <h2 className='subtitulo'>In nothing do men more nearly approach</h2>
           <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>

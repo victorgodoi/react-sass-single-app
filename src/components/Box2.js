@@ -33,19 +33,17 @@ const DivBox = styled.div`
 const NewH3 = styled(Description)`
     max-width: 408px;
 `
-const DivDir = styled.div``
-
 const Box2 = () => {
     return <IdBox>
         <Text>Community health centers do a great deal with limited resources</Text>
         <Img2><img src='/Images/bgBox2.png' width='100' height='84' /></Img2>
         <DivBox>
             <img src='/Images/Imagem2.png' width='373' height='324' />
-            <DivDir>
+            <div>
                 <Subtitle>The life so short, the craft so long to learn</Subtitle>
                 <NewH3>The natural healing force within each one of us is the greatest force in getting well.</NewH3>
                 <Button green>Get Appointment</Button>
-            </DivDir>
+            </div>
         </DivBox>
     </IdBox>
 }
