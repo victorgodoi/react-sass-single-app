@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import styled from "styled-components";
-import Box1 from './components/Box1'
+import Box1 from './components/Box1';
+import Box2 from './components/Box2';
 
 const Content = styled.div`
 width: ${props => props.theme.pageSize};
@@ -59,20 +60,7 @@ function App() {
       <Header small={small} itemAtivo={itemAtivo} />
       <Content>
         <Box1 />
-        <div id='box2' className='box'>
-          <p>Community health centers do a great deal with limited resources</p>
-          <img src='/Images/bgBox2.png' width='100' height='84' />
-          <div className='DivBox2'>
-            <div className='divEsq'>
-              <img src='/Images/Imagem2.png' width='373' height='324' />
-            </div>
-            <div className='divDir'>
-              <h2 className='subtitulo'>The life so short, the craft so long to learn</h2>
-              <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>
-              <button className='verde'>Get Appointment</button>
-            </div>
-          </div>
-        </div>
+        <Box2 />
         <div id='box3' className='box'>
           <div className='divEsq'>
             <h2 className='subtitulo'>Each patient carries his own doctor inside him</h2>
