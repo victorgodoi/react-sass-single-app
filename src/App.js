@@ -2,6 +2,12 @@ import './App.scss';
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import styled from "styled-components";
+import Box1 from './components/Box1'
+
+const Content = styled.div`
+width: ${props => props.theme.pageSize};
+`
 
 function App() {
   const [small, atualizarSmall] = useState(false)
@@ -51,19 +57,8 @@ function App() {
   return (
     <div id='page'>
       <Header small={small} itemAtivo={itemAtivo} />
-      <div className='conteudo'>
-        <div id='box1' className='box'>
-          <div className='divEsq'>
-            <h1>Healing yourself is connected with healing others.</h1>
-            <img src='/Images/bgTitulo.png' width='230' height='82' />
-            <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>
-            <div>
-              <button className='verde'>Get Appointment</button>
-              <p>Why Hella?</p>
-            </div>
-          </div>
-          <div className='divDir'> <img src='/Images/Imagem1.png' width='510' height='380' /></div>
-        </div>
+      <Content>
+        <Box1 />
         <div id='box2' className='box'>
           <p>Community health centers do a great deal with limited resources</p>
           <img src='/Images/bgBox2.png' width='100' height='84' />
@@ -136,16 +131,8 @@ function App() {
             </ul>
           </div>
         </div>
-      </div>
+      </Content>
       <Footer />
-      {/* <footer>
-        <div className='conteudo'>
-          <div>
-            <p>&copy; 2022 Rights Reserved, Taqwah Digital</p>
-            <p>Privacy | Terms & Conditions | Privacy by Design | Secure by Design</p>
-          </div>
-        </div>
-      </footer> */}
     </div>
 
   );

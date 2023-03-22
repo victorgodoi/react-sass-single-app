@@ -14,7 +14,7 @@ const Content = styled.div`
     display: flex;
     justify-content: space-between;
     height: 100%;
-    width: 1073px;
+    width: ${props => props.theme.pageSize};
     p {
         color: ${props => props.theme.branco};
       }

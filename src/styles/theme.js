@@ -4,7 +4,8 @@ const theme = {
     cinzaClaro: "#9b9b9b",
     cinzaEscuro: "#131025",
     cinzaSuperClaro: '#F4F4F4',
-    branco: '#FFFFFF'
+    branco: '#FFFFFF',
+    pageSize: '1073px'
 };
 
 export default theme;

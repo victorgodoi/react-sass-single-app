@@ -45,9 +45,8 @@ html {
   width: 1073px;
 }
 
-//Lembrar de tirar o Footer
-#page,
-footer {
+
+#page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,59 +103,6 @@ button {
     }
   }
 }
-
-#box1 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  h3 {
-    margin-bottom: 65px;
-    max-width: 419px;
-  }
-
-  h1 {
-    font-weight: 600;
-    font-size: 57px;
-    color: $cinzaEscuro;
-    max-width: 500px;
-    line-height: 1.2;
-    letter-spacing: -1px;
-    margin-top: 36px;
-    margin-bottom: 24px;
-  }
-
-  .divEsq {
-    width: 528px;
-    position: relative;
-
-    img {
-      position: absolute;
-      z-index: -1;
-      top: 170px;
-      left: -12px;
-    }
-
-    div {
-      display: flex;
-      align-items: center;
-
-      p {
-        margin: 0 0 0 19px;
-        color: $cinzaEscuro;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .divDir img {
-
-    margin-top: 36px;
-  }
-
-}
-
-
 
 .descricao {
   font-weight: 400;
@@ -281,24 +227,3 @@ h2 {
     }
   }
 }
-
-// footer {
-//   width: 100%;
-//   background-color: $cinzaEscuro;
-//   padding: 23px 0px;
-
-//   .conteudo {
-
-//     height: 100%;
-
-//     div {
-//       display: flex;
-//       justify-content: space-between;
-//       height: 100%;
-
-//       p {
-//         color: $branco;
-//       }
-//     }
-//   }
-// }

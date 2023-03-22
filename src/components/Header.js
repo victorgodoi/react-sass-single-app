@@ -22,7 +22,7 @@ const Content = styled.div`
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    width: 1073px;
+    width: ${props => props.theme.pageSize};
 `
 
 const MenuAuth = styled.ul`
