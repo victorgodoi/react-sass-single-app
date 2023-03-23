@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Box1 from './components/Box1';
 import Box2 from './components/Box2';
 import Box3 from './components/Box3';
+import Box4 from './components/Box4';
 
 const Content = styled.div`
 width: ${props => props.theme.pageSize};
@@ -63,11 +64,7 @@ function App() {
         <Box1 />
         <Box2 />
         <Box3 />
-        <div id='box4' className='box'>
-          <h2 className='subtitulo'>In nothing do men more nearly approach</h2>
-          <h3 className='descricao'>The natural healing force within each one of us is the greatest force in getting well.</h3>
-          <button className='verde'>Go To Services</button>
-        </div>
+        <Box4 />
         <div id='box5' className='box'>
           <div className='divEsq'>
             <img src='/Images/Imagem4.png' width='67' height='61' />
