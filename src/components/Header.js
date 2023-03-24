@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import MenuItem from './MenuItem'
+import Button from "./Button"
 
 const Header = styled.header`
     width: 100%;
@@ -50,7 +51,7 @@ const Component = ({ small, itemAtivo }) => {
             </nav>
             <MenuAuth>
                 <li>Login</li>
-                <li><button>Sign up</button></li>
+                <li><Button>Sign up</Button></li>
             </MenuAuth>
         </Content>
     </Header>
