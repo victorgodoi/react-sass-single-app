@@ -7,6 +7,7 @@ import Box1 from './components/Box1';
 import Box2 from './components/Box2';
 import Box3 from './components/Box3';
 import Box4 from './components/Box4';
+import Box5 from './components/Box5';
 
 const Content = styled.div`
 width: ${props => props.theme.pageSize};
@@ -65,51 +66,7 @@ function App() {
         <Box2 />
         <Box3 />
         <Box4 />
-        <div id='box5' className='box'>
-          <div className='divEsq'>
-            <img src='/Images/Imagem4.png' width='67' height='61' />
-            <ul>
-              <li><img src='/Images/LogoInstagram.png' width='17' height='18' /></li>
-              <li><img src='/Images/LogoTwitter.png' width='18' height='18' /></li>
-              <li><img src='/Images/LogoFacebook.png' width='13' height='18' /></li>
-              <li><img src='/Images/LogoYoutube.png' width='18' height='18' /></li>
-            </ul>
-          </div>
-          <div className='divDir'>
-            <ul>
-              <li>Who We're For</li>
-              <li>Services Tour</li>
-              <li>Services  Timing</li>
-              <li>Experience</li>
-              <li>Payments</li>
-              <li>Expert Doctors</li>
-              <li>PHD Doctors</li>
-            </ul>
-            <ul>
-              <li>Services</li>
-              <li>Services Tour</li>
-              <li>Services Growth</li>
-              <li>Services Experience</li>
-              <li>Payments</li>
-              <li>Billings</li>
-            </ul>
-            <ul>
-              <li>Contact</li>
-              <li>Newsroom</li>
-              <li>Leaders</li>
-              <li>Case Studies</li>
-              <li>Help Center</li>
-              <li>Blog</li>
-            </ul>
-            <ul>
-              <li>About</li>
-              <li>Website Property</li>
-              <li>Doctors</li>
-              <li>Payment Company</li>
-              <li>Partners</li>
-            </ul>
-          </div>
-        </div>
+        <Box5 />
       </Content>
       <Footer />
     </div>
