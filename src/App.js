@@ -35,10 +35,6 @@ function App() {
 
   const detectarItemAtivo = () => {
     boxes.forEach((box) => {
-      //console.log(box.getAttribute("id"), window.scrollY)
-      // if (window.scrollY >= box.offsetTop - box.clientHeight / 3) {
-      //   atualizarItemAtivo(box.getAttribute("id"));
-      // }
       if (box.getAttribute("id") === 'box1' && window.scrollY <= 230) {
 
         atualizarItemAtivo('#');
@@ -57,7 +53,7 @@ function App() {
       }
     });
   }
-  //ARRUMAR O SCROLL DOS iD QUE NAO EXISTEM MAIS
+
   return (
     <div id='page'>
       <Header small={small} itemAtivo={itemAtivo} />

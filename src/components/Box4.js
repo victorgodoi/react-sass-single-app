@@ -17,7 +17,7 @@ const Subtitle2 = styled(Subtitle)`
     max-width: 100%;
 `
 const Box4 = () => {
-    return <DivBox>
+    return <DivBox id='box4' className='box'>
         <Subtitle2>In nothing do men more nearly approach</Subtitle2>
         <Description>The natural healing force within each one of us is the greatest force in getting well.</Description>
         <Button green>Go To Services</Button>

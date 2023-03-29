@@ -48,7 +48,7 @@ const DivDir = styled.div`
 `
 
 const Box1 = () => {
-    return <Box>
+    return <Box id='box1' className='box'>
         <DivEsq>
             <Title>Healing yourself is connected with healing others.</Title>
             <img src='/Images/bgTitulo.png' width='230' height='82' />

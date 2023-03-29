@@ -3,7 +3,7 @@ import Description from "./Description"
 import Button from "./Button"
 import Subtitle from "./Subtitle"
 
-const IdBox = styled.div`
+const Box = styled.div`
     width: 100%;
     position: relative;
     padding-top: 160px;
@@ -34,7 +34,7 @@ const NewH3 = styled(Description)`
     max-width: 408px;
 `
 const Box2 = () => {
-    return <IdBox>
+    return <Box id='box2' className='box'>
         <Text>Community health centers do a great deal with limited resources</Text>
         <Img2><img src='/Images/bgBox2.png' width='100' height='84' /></Img2>
         <DivBox>
@@ -45,7 +45,7 @@ const Box2 = () => {
                 <Button green>Get Appointment</Button>
             </div>
         </DivBox>
-    </IdBox>
+    </Box>
 }
 
 export default Box2
