@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Description from "./Description"
 import Button from "./Button"
+import { useState } from "react"
 
 const Box = styled.div`
     width: 100%;
@@ -48,13 +49,27 @@ const DivDir = styled.div`
 `
 
 const Box1 = () => {
+    const [dado, atualizarDado] = useState()
+    const meuRequest = async () => {
+        try {
+            const resposta = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+            const resultado = await resposta.json()
+            atualizarDado(resultado)
+            // vem pra cá	
+        } catch (erro) {
+            // vem pra cá
+            console.log(erro.message)
+        }
+    }
+    console.log(dado?.id)
+
     return <Box id='box1' className='box'>
         <DivEsq>
             <Title>Healing yourself is connected with healing others.</Title>
             <img src='/Images/bgTitulo.png' width='230' height='82' />
             <SubTitle>The natural healing force within each one of us is the greatest force in getting well.</SubTitle>
             <Actions>
-                <Button green>Get Appointment</Button>
+                <Button green onClick={() => meuRequest()}>Get Appointment</Button>
                 <Link>Why Hella?</Link>
             </Actions>
         </DivEsq>
